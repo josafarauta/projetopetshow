@@ -1,0 +1,41 @@
+# Dependências de módulos
+/petshow-frontend/node_modules
+/petshow-backend/node_modules
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+/petshow-frontend/.env
+/petshow-backend/.env
+
+# Build
+/petshow-frontend/dist
+/petshow-frontend/build
+/petshow-frontend/.vite/
+
+/petshow-backend/dist
+/petshow-backend/build
+
+# IDEs e Ferramentas
+.vscode/
+.idea/
+*.iml
+*.swp
+.DS_Store
+Thumbs.db
+
+# Arquivos de banco de dados (se você não quiser versionar seu DB local)
+# Remova ou comente as linhas abaixo se você quiser versionar seus arquivos de banco de dados SQLite!
+# Por exemplo, se seu banco se chama 'petshow.sqlite', adicione 'petshow.sqlite'
+# ou se você quer ignorar todos os .db e .sqlite, mantenha.
+# Por enquanto, vou deixar para ignorar, o que é comum para DBs locais de dev.
+*.sqlite
+*.db

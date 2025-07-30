@@ -1,0 +1,378 @@
+/* Estilos globais para a aplicação */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.App {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.App-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  color: #34495e;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.8em;
+}
+
+/* Estilos de Navegação */
+nav {
+  background-color: #3498db; /* Azul */
+  padding: 0.8rem 0;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 15px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #2980b9; /* Um azul um pouco mais escuro ao passar o mouse */
+}
+
+/* Estilos para o Conteúdo Principal */
+main {
+  padding: 1rem;
+}
+
+p {
+  color: #666;
+  margin-bottom: 1em;
+}
+
+/* Estilos para Listas de Itens (Animais, Veterinários, etc.) */
+ul {
+  list-style: none;
+  padding: 0;
+  width: 90%;
+  max-width: 800px; /* Limita a largura da lista */
+  margin: 0 auto;
+}
+
+li {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  margin-bottom: 0.8rem;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  font-size: 1.1em;
+}
+
+li span {
+  flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+  text-align: left;
+}
+
+/* Estilos para Botões de Ação (Editar/Excluir) */
+.edit-button,
+.delete-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 10px;
+}
+
+.edit-button {
+  background-color: #3498db; /* Azul */
+  color: white;
+  text-decoration: none; /* Para Link como botão */
+  display: inline-block; /* Para o Link se comportar como botão */
+  line-height: 1; /* Alinha o texto no centro */
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+.delete-button {
+  background-color: #e74c3c; /* Vermelho */
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+/* Estilos para Formulários */
+form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  max-width: 550px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+form div {
+  margin-bottom: 18px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[type="email"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.25);
+}
+
+form button {
+  background-color: #2ecc71; /* Verde */
+  color: white;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: auto;
+  display: block;
+  margin: 25px auto 0; /* Centraliza o botão */
+}
+
+form button:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+}
+
+/* Mensagens de feedback */
+p[style="color: green;"] {
+  background-color: #e6ffe6;
+  border: 1px solid #00cc00;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #008000;
+}
+
+p[style="color: red;"] {
+  background-color: #ffe6e6;
+  border: 1px solid #ff0000;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #cc0000;
+}
+
+.error-message {
+  color: #d9534f; /* Um vermelho mais suave */
+  font-size: 0.85em;
+  margin-top: 5px;
+  padding-left: 5px; /* Para um pequeno recuo */
+}
+
+/* Opcional: Para destacar inputs com erro */
+input.error,
+select.error,
+textarea.error {
+  border: 1px solid #d9534f;
+}
+/* Estilos para o LoadingSpinner */
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px; /* Ou a altura que desejar para centralizar */
+  margin-top: 20px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #007bff; /* Cor primária do seu tema */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilo para mensagens de erro do Yup/Formik */
+.error-message {
+  color: #dc3545; /* Cor de erro vermelha */
+  font-size: 0.85em;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para o campo de busca */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Garante que padding não aumente a largura total */
+}
+
+/* Estilo para a mensagem de "nenhum resultado" */
+.no-results-message {
+  text-align: center;
+  margin: 20px 0;
+  color: #555;
+  font-style: italic;
+}
+
+/* Estilos de botões para CRUD (ajuste conforme seu design) */
+.edit-button {
+  background-color: #ffc107; /* Amarelo */
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none; /* Para Link */
+  margin-right: 5px;
+  display: inline-block; /* Para Link */
+  text-align: center;
+}
+
+.delete-button {
+  background-color: #dc3545; /* Vermelho */
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilos para formulários (ajuste conforme seu design) */
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[type="time"],
+form input[type="email"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button[type="submit"] {
+  background-color: #007bff; /* Azul primário */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos de lista (ajuste conforme seu design) */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f8f9fa;
+  border: 1px solid #e2e6ea;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

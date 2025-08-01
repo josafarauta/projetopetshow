@@ -38,6 +38,7 @@ nav {
   border-radius: 8px;
   margin-bottom: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 nav ul {
@@ -45,11 +46,11 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Centraliza os links */
 }
 
 nav li {
-  margin: 0 15px;
+  margin: 0 15px; /* Adiciona espaçamento entre os links */
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -63,6 +64,7 @@ nav a {
   padding: 8px 12px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
+  display: block;
 }
 
 nav a:hover {
@@ -80,15 +82,15 @@ p {
 }
 
 /* Estilos para Listas de Itens (Animais, Veterinários, etc.) */
-ul {
+.list-container ul {
   list-style: none;
   padding: 0;
   width: 90%;
-  max-width: 800px; /* Limita a largura da lista */
+  max-width: 800px;
   margin: 0 auto;
 }
 
-li {
+.list-container li {
   background-color: #ffffff;
   border: 1px solid #ddd;
   margin-bottom: 0.8rem;
@@ -101,8 +103,8 @@ li {
   font-size: 1.1em;
 }
 
-li span {
-  flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
+.list-container li span {
+  flex-grow: 1;
   text-align: left;
 }
 
@@ -121,9 +123,9 @@ li span {
 .edit-button {
   background-color: #3498db; /* Azul */
   color: white;
-  text-decoration: none; /* Para Link como botão */
-  display: inline-block; /* Para o Link se comportar como botão */
-  line-height: 1; /* Alinha o texto no centro */
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
 }
 
 .edit-button:hover {
@@ -197,7 +199,7 @@ form button {
   transition: background-color 0.3s ease, transform 0.2s ease;
   width: auto;
   display: block;
-  margin: 25px auto 0; /* Centraliza o botão */
+  margin: 25px auto 0;
 }
 
 form button:hover {
@@ -229,25 +231,24 @@ p[style="color: red;"] {
 }
 
 .error-message {
-  color: #d9534f; /* Um vermelho mais suave */
+  color: #d9534f;
   font-size: 0.85em;
   margin-top: 5px;
-  padding-left: 5px; /* Para um pequeno recuo */
+  padding-left: 5px;
 }
 
-/* Opcional: Para destacar inputs com erro */
 input.error,
 select.error,
 textarea.error {
   border: 1px solid #d9534f;
 }
-/* Estilos para o LoadingSpinner */
+
 .spinner-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100px; /* Ou a altura que desejar para centralizar */
+  height: 100px;
   margin-top: 20px;
 }
 
@@ -255,7 +256,7 @@ textarea.error {
   width: 40px;
   height: 40px;
   border: 4px solid rgba(0, 0, 0, 0.1);
-  border-left-color: #007bff; /* Cor primária do seu tema */
+  border-left-color: #007bff;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -269,15 +270,13 @@ textarea.error {
   }
 }
 
-/* Estilo para mensagens de erro do Yup/Formik */
 .error-message {
-  color: #dc3545; /* Cor de erro vermelha */
+  color: #dc3545;
   font-size: 0.85em;
   margin-top: 5px;
   margin-bottom: 10px;
 }
 
-/* Estilos para o campo de busca */
 .search-bar {
   margin-bottom: 20px;
 }
@@ -287,10 +286,9 @@ textarea.error {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box; /* Garante que padding não aumente a largura total */
+  box-sizing: border-box;
 }
 
-/* Estilo para a mensagem de "nenhum resultado" */
 .no-results-message {
   text-align: center;
   margin: 20px 0;
@@ -298,22 +296,22 @@ textarea.error {
   font-style: italic;
 }
 
-/* Estilos de botões para CRUD (ajuste conforme seu design) */
+/* Estilos de botões para CRUD */
 .edit-button {
-  background-color: #ffc107; /* Amarelo */
+  background-color: #ffc107;
   color: white;
   padding: 8px 12px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  text-decoration: none; /* Para Link */
+  text-decoration: none;
   margin-right: 5px;
-  display: inline-block; /* Para Link */
+  display: inline-block;
   text-align: center;
 }
 
 .delete-button {
-  background-color: #dc3545; /* Vermelho */
+  background-color: #dc3545;
   color: white;
   padding: 8px 12px;
   border: none;
@@ -321,7 +319,7 @@ textarea.error {
   cursor: pointer;
 }
 
-/* Estilos para formulários (ajuste conforme seu design) */
+/* Estilos para formulários */
 form div {
   margin-bottom: 15px;
 }
@@ -347,7 +345,7 @@ form textarea {
 }
 
 form button[type="submit"] {
-  background-color: #007bff; /* Azul primário */
+  background-color: #007bff;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -360,13 +358,13 @@ form button[type="submit"]:hover {
   background-color: #0056b3;
 }
 
-/* Estilos de lista (ajuste conforme seu design) */
-ul {
+/* Estilos de lista para o conteúdo */
+.content-list ul {
   list-style: none;
   padding: 0;
 }
 
-li {
+.content-list li {
   background-color: #f8f9fa;
   border: 1px solid #e2e6ea;
   border-radius: 5px;
